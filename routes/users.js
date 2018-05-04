@@ -37,8 +37,8 @@ router
   			.json({ error: true , message: 'body empty'})
   		}
    	
-   		let PUser=req.body
-   		var  user({
+   		/*let PUser=req.body;
+   		var  user={
    			nombre: PUser.nombre,
    			apellido: PUser.apellido
    			fechapago: PUser.fechapago
@@ -48,7 +48,7 @@ router
    			edad: PUser.edad
    			idGimnasio: PUser.idGimnasio
    			activo: PUser.activo
-   		})  
+   		} 
    		try
    		{
    			var query = client.query('INSERT INTO public.usuario('+'nombre, apellido,'
@@ -63,7 +63,7 @@ router
 
 		//res es lo que devuelve
 		res
-			.status(200)
+			.status(200)*/
 			
 })
 /*get an user*/
