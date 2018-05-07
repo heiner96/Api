@@ -8,7 +8,7 @@ router
 		//res es lo que devuelve
 		res
 			.status(200)
-			.json({message: 'hola mundo cruel'})
+			.json({message: 'hola mundo!'})
 });
 
 

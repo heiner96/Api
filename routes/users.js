@@ -4,7 +4,7 @@ var express = require('express');
 var router = express.Router();
 const pg = require('pg');
 
-var conString = "postgres://mxohkymgbhkwct:f6746664a6e5e134a0a14378e49a5f500f0ef9fd0ec9efcc4669832761b5cf15@ec2-23-23-248-192.compute-1.amazonaws.com:5432/dc3ugqppcpfr5k";
+var conString = "postgres://bsmnijcuiwvkjv:74cc40e5aeacbab1b05062b5bbe05be74e4b169fd16e4f1fbec5c322e35870a2@ec2-23-23-248-192.compute-1.amazonaws.com:5432/ddgv69397q5l6b";
 
 const client = new pg.Client(conString);
 
@@ -17,7 +17,7 @@ query.on('end', () => { client.end(); });
 */
 
 /* GET users */
-router.get('/', function(req, res, next) {
+router.get('/user', function(req, res, next) {
 	
 	client.connect();
 
@@ -29,7 +29,7 @@ router.get('/', function(req, res, next) {
 })
 /*create user*/
 router
-	.post('/', function(req, res, next) {
+	.post('/user', function(req, res, next) {
 		if(!req.body)
 		{
   			res
